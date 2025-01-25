@@ -11,8 +11,9 @@ import com.example.orange_ji.presentation.mainfollowing.FollowingFragment
 import com.example.orange_ji.presentation.mainprofile.ProfileFragment
 import com.example.orange_ji.utils.base.BaseVMActivity
 import com.example.orange_ji.presentation.mainhome.HomeFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : BaseVMActivity<ActivityMainBinding, MainViewModel>() {
+ class MainActivity : BaseVMActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun getViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
@@ -26,7 +27,6 @@ class MainActivity : BaseVMActivity<ActivityMainBinding, MainViewModel>() {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         enableEdgeToEdge()
-        setContentView(binding.root)
 
         if (savedInstanceState == null) {
             loadFragment(HomeFragment())

@@ -30,10 +30,10 @@ class PostItemAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             TYPE_HIGHLIGHTED -> {
-                val view = ItemHighlightedPostTextBinding.inflate(
+                val binding = ItemHighlightedPostTextBinding.inflate(
                     LayoutInflater.from(parent.context), parent, false
                 )
-                ItemHighlightedPostTextViewHolder(view)
+                ItemHighlightedPostTextViewHolder(binding)
             }
 
             else -> {
